@@ -80,9 +80,9 @@ public class AlbumsController {
 
     private void tryToUploadCover(@PathVariable Long albumId, @RequestParam("file") MultipartFile uploadedFile) throws IOException {
         Blob coverBlob = new Blob(
-            getCoverBlobName(albumId),
-            uploadedFile.getInputStream(),
-            uploadedFile.getContentType()
+                getCoverBlobName(albumId),
+                uploadedFile.getInputStream(),
+                uploadedFile.getContentType()
         );
 
         blobStore.put(coverBlob);
@@ -92,7 +92,7 @@ public class AlbumsController {
         ClassLoader classLoader = getClass().getClassLoader();
         InputStream input = classLoader.getResourceAsStream("default-cover.jpg");
 
-        return new Blob("default-cover", input, IMAGE_JPEG_VALUE);
+        return new Blob("default-cover", input, MediaType.IMAGE_JPEG_VALUE);
     }
 
     private String getCoverBlobName(@PathVariable long albumId) {
