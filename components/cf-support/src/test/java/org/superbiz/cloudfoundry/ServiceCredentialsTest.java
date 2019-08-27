@@ -1,4 +1,4 @@
-package org.superbiz.moviefun;
+package org.superbiz.cloudfoundry;
 
 import org.junit.Test;
 
