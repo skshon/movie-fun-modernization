@@ -8,9 +8,9 @@ logging.level:
   org.superbiz.moviefun: DEBUG
 
 s3:
-  accessKey: AKIAVT7FZ27LRKHN67MK
-  secretKey: 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
-  bucketName: skshon.lsis.com
+  accessKey: 
+  secretKey: 
+  bucketName: 
 
 albums:
   url: http://localhost:8081/albums
